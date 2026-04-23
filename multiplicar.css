@@ -42,6 +42,15 @@ body {
     margin-bottom: 20px;
 }
 
+.instrucciones {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-align: center;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
 #inputTabla {
     width: 100%;
     background: var(--glass-bg);

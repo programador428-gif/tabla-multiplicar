@@ -1,7 +1,7 @@
 let titulo = document.getElementById("titulo");
 let contenedor = document.getElementById("cuerpo-tabla");
 
-function tablaMultiplicadora(valor) {
+function generarTablas(valor) {
   let contenido = "";
 
   for (let i = 1; i <= 10; i++) {
@@ -19,11 +19,14 @@ function tablaMultiplicadora(valor) {
 }
 
 document.getElementById('btnProbar').addEventListener('click', () => {
-  let numeroUsuario = document.getElementById('inputTabla').value;
+  let input = document.getElementById('inputTabla');
+  let numeroUsuario = input.value;
 
-  if (numeroUsuario !== "") {
-    tablaMultiplicadora(parseInt(numeroUsuario));
+  if (numeroUsuario !== "" && numeroUsuario > 0) {
+    generarTablas(parseInt(numeroUsuario));
+    input.value = "";
+    input.placeholder = `Última: tabla del ${numeroUsuario}`;
   } else {
-    alert("Por favor, ingresa un número primero.");
+    alert("¡Ups! Necesitas ingresar un número positivo para poder calcular la tabla.");
   }
 });
