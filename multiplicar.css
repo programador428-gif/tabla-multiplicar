@@ -37,6 +37,35 @@ body {
     z-index: 1;
 }
 
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#inputTabla {
+    width: 100%;
+    background: var(--glass-bg);
+    border: 2px solid rgba(188, 19, 254, 0.3);
+    border-radius: 15px;
+    padding: 12px 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+#inputTabla:focus {
+    border-color: var(--secondary-neon);
+    box-shadow: 0 0 15px var(--secondary-neon);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#inputTabla::placeholder {
+    color: rgba(240, 230, 255, 0.4);
+}
+
 .btn-probar {
     background: transparent;
     color: var(--text-color);

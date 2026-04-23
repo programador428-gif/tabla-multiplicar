@@ -19,5 +19,11 @@ function tablaMultiplicadora(valor) {
 }
 
 document.getElementById('btnProbar').addEventListener('click', () => {
-  tablaMultiplicadora(5);
+  let numeroUsuario = document.getElementById('inputTabla').value;
+
+  if (numeroUsuario !== "") {
+    tablaMultiplicadora(parseInt(numeroUsuario));
+  } else {
+    alert("Por favor, ingresa un número primero.");
+  }
 });
