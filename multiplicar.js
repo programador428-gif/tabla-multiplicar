@@ -28,5 +28,9 @@ document.getElementById('btnProbar').addEventListener('click', () => {
     input.placeholder = `Última: tabla del ${numeroUsuario}`;
   } else {
     alert("¡Ups! Necesitas ingresar un número positivo para poder calcular la tabla.");
+    input.value = "";
+    input.placeholder = "Ej: 5";
+    titulo.innerText = "Tabla del...";
+    contenedor.innerHTML = "";
   }
 });
